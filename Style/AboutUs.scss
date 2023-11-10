@@ -1,0 +1,588 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: nav;
+    @media (max-width: 768px) {
+      display: block;
+      width: 60%;
+      margin: 10% 20%;
+      justify-content: center;
+      align-items: center;
+    }
+    .dropdown {
+      visibility: hidden;
+      display: block;
+      .dropbtn {
+        border-radius: 1rem;
+      }
+      .dropdown-content {
+      }
+    }
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bolder;
+      letter-spacing: 3px;
+      font-size: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+
+      @media (max-width: 768px) {
+        font-size: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .nav-item {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+      .item {
+        display: flex;
+        font-size: 20px;
+        justify-items: center;
+        align-items: center;
+        margin: 15px 10px;
+        text-decoration: none;
+        color: black;
+      }
+      .special {
+        padding: 10px;
+        border: 3px solid #fef4e7;
+        background-color: #fef4e7;
+        border-radius: 25px;
+        color: orange;
+        margin-left: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      .dropdown {
+        visibility: visible;
+        justify-content: center;
+        display: flex;
+        .dropbtn {
+          background-color: #3498db;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          width: 80%;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+          background-color: #2980b9;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {
+          background-color: #ddd;
+        }
+
+        .show {
+          display: block;
+        }
+      }
+      .nav-item {
+        visibility: hidden;
+        margin: 0;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    margin: 5% 10%;
+    @media (max-width: 768px) {
+      width: 90%;
+      margin: 0 5%;
+      display: block;
+    }
+    .about-text {
+      width: 60%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 50px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        border: 1px solid #ffa500;
+        background-color: #ffa500;
+        border-radius: 25px;
+        padding: 10px;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 768px) {
+        width: 90%;
+        margin: 0 5%;
+        h1{
+          font-size: 25px;
+        }
+        a{
+          width: auto;
+        }
+      }
+    }
+    .about-img {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      position: relative;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      @media (max-width: 768px) {
+        width: 90%;
+        margin: 0 5%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .about-img::before {
+      content: "";
+      position: absolute;
+      justify-content: flex-end;
+      top: 0;
+      left: 0;
+      width: 25%;
+      height: 100%;
+      background-color: #ba6905;
+      z-index: 1;
+      opacity: 0.6;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  }
+
+  .Features-Section {
+    display: grid;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px 200px;
+    font-family: "Poppins", sans-serif;
+    grid-template-areas:
+      "des1 des1 des2 des2"
+      "tx3 tx4 tx5 tx6";
+
+    column-gap: 10px;
+    row-gap: 10px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      margin-top: 3rem;
+    }
+    .text1 {
+      grid-area: des1;
+      font-weight: 400;
+      @media (max-width: 768px) {
+
+      }
+    }
+    .text2 {
+      grid-area: des2;
+    }
+    .text3 {
+      grid-area: tx3;
+    }
+    .text4 {
+      grid-area: tx4;
+    }
+    .text5 {
+      grid-area: tx5;
+    }
+    .text6 {
+      grid-area: tx6;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 25px;
+      color: #ffa500;
+    }
+    span {
+      font-weight: 600;
+      font-size: 35px;
+    }
+    p {
+      font-style: 18px;
+      font-weight: 350;
+    }
+    @media (max-width: 768px) {
+      span{
+        font-size: 25px;
+
+      }
+    }
+  }
+
+  .About-Section {
+    display: grid;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 150px;
+    font-family: "Poppins", sans-serif;
+    grid-template-areas:
+      "tx tx img img"
+      "tx tx img img";
+
+    column-gap: 60px;
+    row-gap: 60px;
+    @media (max-width: 768px) {
+      display: block;
+      position: relative;
+      h1{
+        font-size: 25px;
+      }
+    }
+    .about-text {
+      grid-area: tx;
+      width: 80%;
+    }
+    .about-img {
+      grid-area: img;
+      img {
+        object-fit: cover;
+      }
+    }
+    p {
+      font-weight: 350;
+      font-size: 18px;
+    }
+  }
+
+  .Team-section {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    font-family: "Poppins", sans-serif;
+    grid-template-areas:
+      "ti ti ti ti"
+      "img1 img2 img3 img4";
+      @media (max-width: 768px){
+        width: 90%;
+        margin: 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+        .img_1{
+          width: 50%;
+        }
+        .img_2{
+          width: 50%;
+        }
+        .img_3{
+          width: 50%;
+        }
+        .img_4{
+          width: 50%;
+        }
+        img{
+          position: relative;
+        }
+      }
+    .text {
+      grid-area: ti;
+    }
+    .img_1 {
+      grid-area: img1;
+    }
+    .img_2 {
+      grid-area: img2;
+    }
+    .img_3 {
+      grid-area: img3;
+    }
+    .img_4 {
+      grid-area: img4;
+    }
+  }
+
+  .Video-Section {
+    margin: 0 150px;
+    margin-top: 25%;
+    margin-bottom: 10%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px){
+      display: none;
+      
+    }
+    .left {
+      width: 50%;
+      // @media (max-width: 768px){
+      //   position: relative;
+      //   width: 90%;
+      //   margin: 0 5%;
+
+      // }
+      .person {
+        display: flex;
+        .infor {
+          margin-top: 10px;
+          margin-left: 20px;
+          font-family: "Poppins", sans-serif;
+          line-height: 5px;
+          h4 {
+            font-weight: 450;
+          }
+          h5 {
+            font-weight: 500;
+            color: #ffa500;
+          }
+        }
+        
+      }
+      h1 {
+        width: 380px;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+      p {
+        width: 480px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    .right {
+      position: relative;
+      // @media (max-width: 768px){
+      //   img{
+      //     width: 80%;
+      //     margin: 0 5%;
+      //   }
+      // }
+      .play-icon {
+        cursor: pointer;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 35px;
+        left: 25px;
+      }
+      img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .Lastest-Section {
+    background-image: url("../assets/BG_header.png");
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px){
+      display: none;
+    }
+    .main {
+      margin: 5% 150px;
+      .help-posts {
+        display: flex;
+        gap: 50px;
+        .item {
+          border: 2px solid white;
+          border-radius: 20px;
+          background-color: white;
+          font-family: "Poppins", sans-serif;
+          .title {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 10px;
+          }
+          p {
+            font-weight: 350;
+            font-size: 18px;
+            margin: 10px;
+          }
+          a {
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            color: #ffa500;
+            margin: 10px;
+          }
+        }
+      }
+    }
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+
+  .wrapper {
+    background-color: #063255;
+    position: relative;
+    .footer {
+      margin-left: 10%;
+      margin-right: 10%;
+      display: grid;
+      color: white;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 0.5fr;
+      font-family: "Poppins", sans-serif;
+      grid-template-areas:
+        "inf1 inf2 inf3 inf4"
+        "inf5 inf5 inf6 inf6";
+
+      column-gap: 50px;
+      row-gap: 60px;
+
+      .item1 {
+        grid-area: inf1;
+      }
+      .item2 {
+        grid-area: inf2;
+      }
+      .item3 {
+        grid-area: inf3;
+      }
+      .item4 {
+        grid-area: inf4;
+        .button {
+          cursor: pointer;
+          border: 1px solid #ffa500;
+          border-radius: 15px;
+          margin-top: 15px;
+          padding: 8px;
+          background-color: #ffa500;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      .item5 {
+        grid-area: inf5;
+      }
+      .item6 {
+        grid-area: inf6;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: 28px;
+        width: 300px;
+      }
+      p {
+        font-weight: 300;
+      }
+      input {
+        border-radius: 15px;
+        padding: 12px;
+        width: 250px;
+      }
+      .shape {
+        position: absolute;
+        .shape-left {
+          position: absolute;
+          border: 1px solid #ffa500;
+          width: 50px;
+          height: 150px;
+          border-top-right-radius: 20px;
+          background-color: #ffa500;
+          right: 7.6rem;
+          top: 18.5rem;
+          @media (max-width: 768px) {
+          }
+        }
+        .shape-right {
+          position: absolute;
+          border: 1px solid #ffa500;
+          width: 50px;
+          height: 250px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background-color: #ffa500;
+          left: 82.2rem;
+          top: 0px;
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .wrapper {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-size: 15px;
+      display: block;
+      .footer {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+  .Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: nav;
+    @media (max-width: 768px) {
+      display: block;
+      width: 60%;
+      margin: 10% 20%;
+      justify-content: center;
+      align-items: center;
+    }
+    .dropdown{
+      visibility: hidden;
+      display: block;
+      .dropbtn{
+        border-radius: 1rem;
+      }
+      .dropdown-content{
+        
+      }
+
+    }
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bolder;
+      letter-spacing: 3px;
+      font-size: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+
+      @media (max-width: 768px) {
+        font-size: auto;
+        align-items: center;
+        justify-content: center;
+      }
+
+    }
+    .nav-item {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+      .item {
+        display: flex;
+        font-size: 20px;
+        justify-items: center;
+        align-items: center;
+        margin: 15px 10px;
+        text-decoration: none;
+        color: black;
+        width: auto;
+      }
+      .special {
+        padding: 10px;
+        border: 3px solid #fef4e7;
+        background-color: #fef4e7;
+        border-radius: 25px;
+        color: orange;
+        margin-left: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      .dropdown{
+        visibility: visible;
+        justify-content: center;
+        display: flex;
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          width: 80%;
+
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #2980B9;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+      }
+      .nav-item{
+        visibility: hidden;
+        margin: 0;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+  .header {
+    display: block;
+    width: 80%;
+    margin: 0 10%;
+    margin-bottom: 4rem;
+    @media (max-width: 768px) {
+      width: 60%;
+      height: 100%;
+      margin: 0 20%;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 50px;
+      margin: 4rem 0;
+    }
+    .job {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        width: 50%;
+      }
+      .right {
+        width: 30%;
+      }
+      span {
+        font-weight: 400;
+        font-style: 22px;
+      }
+      p {
+        font-weight: 350;
+        font-style: 18px;
+      }
+    }
+  }
+
+  .detail {
+    background-image: url("../assets/BG_header.png");
+    height: 70vh;
+    width: 80%;
+    margin: 10% 10%;
+    border-radius: 20px;
+    position: relative;
+    @media (max-width: 768px) {
+      height: 100%;
+      width: 60%;
+      margin: 0 20%;
+    }
+    .box {
+      display: grid;
+      margin: 3rem;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: repeat(3, 1rem);
+      font-family: "Poppins", sans-serif;
+      grid-template-areas:
+        "ti1 txt1"
+        "ti2 txt2"
+        "ti3 txt3";
+
+      column-gap: 60px;
+      row-gap: 70px;
+      @media (max-width: 768px) {
+        display: block;
+      }
+      .title1 {
+        font-weight: 500;
+        grid-area: ti1;
+        color: #ffa500;
+        font-size: 22px;
+        margin-top: 3rem;
+        @media (max-width: 768px) {
+          font-weight: 600;
+          font-size: 2rem;
+        }
+      }
+      .title2 {
+        font-weight: 500;
+        grid-area: ti2;
+        font-size: 22px;
+        margin-top: 3rem;
+      }
+      .title3 {
+        font-weight: 500;
+        grid-area: ti3;
+        font-size: 22px;
+        margin-top: 3rem;
+      }
+      .text1 {
+        grid-area: txt1;
+        margin-top: 2rem;
+        p {
+          font-weight: 350;
+        }
+      }
+      .text2 {
+        grid-area: txt2;
+        margin-top: 2rem;
+        p {
+          font-weight: 350;
+        }
+      }
+      .text3 {
+        grid-area: txt3;
+        margin-top: 2rem;
+        p {
+          font-weight: 350;
+        }
+      }
+    }
+
+  }
+
+  .apply_section {
+
+    width: 80%;
+    margin: 10% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+
+    grid-template-areas:
+      "ti ti"
+      "it1 it2"
+      "it3 it4"
+      "it5 it5"
+      "it5 it5"
+      "but but";
+
+    column-gap: 60px;
+    row-gap: 70px;
+    .title {
+      grid-area: ti;
+      font-weight: 600;
+      font-size: 40px;
+      @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    }
+    .item1 {
+      grid-area: it1;
+    }
+    .item2 {
+      grid-area: it2;
+    }
+    .item3 {
+      grid-area: it3;
+    }
+    .item4 {
+      grid-area: it4;
+    }
+    .item5 {
+      grid-area: it5;
+      width: 100%;
+      height: 100%;
+      textarea{
+        width: 100%;
+        height: 10rem;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 2rem;
+        background-color: #f8f9fc;
+        font-size: 16px;
+        resize: none;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    .button {
+      grid-area: but;
+      button {
+        padding: 0.5rem;
+        border-radius: 15px;
+        background-color: #ffa500;
+        border: none;
+        color: white;
+        font-size: 16px;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      border: none;
+      background-color: #f8f9fc;
+      border-radius: 2rem;
+    }
+  }
+
+  .wrapper {
+    background-color: #063255;
+    position: relative;
+    .footer {
+      margin-left: 10%;
+      margin-right: 10%;
+      display: grid;
+      color: white;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 0.5fr;
+      font-family: "Poppins", sans-serif;
+      grid-template-areas:
+        "inf1 inf2 inf3 inf4"
+        "inf5 inf5 inf6 inf6";
+
+      column-gap: 50px;
+      row-gap: 60px;
+
+      .item1 {
+        grid-area: inf1;
+      }
+      .item2 {
+        grid-area: inf2;
+      }
+      .item3 {
+        grid-area: inf3;
+      }
+      .item4 {
+        grid-area: inf4;
+        .button {
+          cursor: pointer;
+          border: 1px solid #ffa500;
+          border-radius: 15px;
+          margin-top: 15px;
+          padding: 8px;
+          background-color: #ffa500;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      .item5 {
+        grid-area: inf5;
+      }
+      .item6 {
+        grid-area: inf6;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: 28px;
+        width: 300px;
+      }
+      p {
+        font-weight: 300;
+      }
+      input {
+        border-radius: 15px;
+        padding: 12px;
+        width: 250px;
+      }
+      .shape {
+        position: absolute;
+        .shape-left {
+          position: absolute;
+          border: 1px solid #ffa500;
+          width: 50px;
+          height: 150px;
+          border-top-right-radius: 20px;
+          background-color: #ffa500;
+          right: 7.6rem;
+          top: 18.5rem;
+          @media (max-width: 768px) {}
+        }
+        .shape-right {
+          position: absolute;
+          border: 1px solid #ffa500;
+          width: 50px;
+          height: 250px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background-color: #ffa500;
+          left: 82.2rem;
+          top: 0px;
+          @media (max-width: 768px) {
+            display: none;
+
+          }
+        }
+        
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .wrapper{
+      margin: 0;;
+      padding: 0;
+      width: 100%;
+      font-size: 15px;
+      display: block;
+      .footer{
+        display: block;
+
+
+
+      }
+    }
+  }
+}
+
