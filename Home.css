@@ -14,10 +14,10 @@ body .Navbar {
 }
 @media (max-width: 768px) {
   body .Navbar {
-    display: block;
-    width: 60%;
-    margin: 10% 20%;
-    justify-content: center;
+    display: flex;
+    width: 80%;
+    margin: 10% 10%;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -74,17 +74,17 @@ body .Navbar .nav-item .special {
     display: flex;
   }
   body .Navbar .dropdown .dropbtn {
-    background-color: #3498db;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+    background-color: #fff;
+    color: black;
+    padding: 1rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     width: 80%;
   }
   body .Navbar .dropdown .dropbtn:hover,
   body .Navbar .dropdown .dropbtn:focus {
-    background-color: #2980b9;
+    background-color: #FFF;
   }
   body .Navbar .dropdown .dropdown {
     position: relative;
@@ -124,6 +124,7 @@ body .Header {
   justify-content: center;
   font-family: "Poppins", sans-serif;
   align-items: center;
+  height: 100%;
   width: 100%;
   flex-wrap: nowrap;
 }
@@ -144,16 +145,17 @@ body .Header .header-text {
   margin-left: 10%;
 }
 body .Header .header-text .mid {
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 @media (max-width: 768px) {
   body .Header .header-text .mid {
-    margin: 0;
+    margin: 2rem 0;
   }
 }
 body .Header .header-text .mid .button {
+  margin-top: 100px;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem;
   font-weight: 400;
 }
 @media (max-width: 768px) {
@@ -269,6 +271,11 @@ body .Help-section .help-posts {
     width: 80%;
   }
 }
+@media (max-width: 768px) {
+  body .Help-section .help-posts .item {
+    margin: 2rem 0;
+  }
+}
 body .Help-section .help-posts .item .title {
   font-weight: 400;
   font-size: 18px;
@@ -286,6 +293,7 @@ body .Help-section .help-posts .item p {
 @media (max-width: 768px) {
   body .Help-section .help-posts .item p {
     width: 100%;
+    margin: 0;
   }
 }
 body .Help-section .help-posts .item a {
@@ -346,10 +354,9 @@ body .Features-Section .features {
 }
 @media (max-width: 768px) {
   body .Features-Section .features {
-    margin: 10% 0.5rem;
+    margin: 10% 10%;
     width: 80%;
-    display: flex;
-    flex-wrap: nowrap;
+    display: block;
   }
 }
 body .Features-Section .features .box {
@@ -360,7 +367,7 @@ body .Features-Section .features .box {
 }
 @media (max-width: 768px) {
   body .Features-Section .features .box {
-    margin: 0 0.1rem;
+    margin: 1rem 0;
   }
 }
 body .Features-Section .features .box .item {
@@ -491,7 +498,8 @@ body .Service-Section .main .left .service-tab .button {
 @media (max-width: 768px) {
   body .Service-Section .main .left .service-tab .button {
     width: 100%;
-    margin-top: 2rem;
+    margin: 2rem 0.5rem 0.5rem 0;
+    font-size: 8px;
   }
 }
 body .Service-Section .main .left .service-tab .special {
@@ -501,10 +509,18 @@ body .Service-Section .main .left .service-tab .special {
 }
 body .Service-Section .main .left .service-tab a {
   text-decoration: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 body .Service-Section .main .left .text {
   margin: 5rem 0;
   width: 95%;
+}
+@media (max-width: 768px) {
+  body .Service-Section .main .left .text {
+    margin: 2rem 0;
+  }
 }
 body .Service-Section .main .left .text h1 {
   font-size: 35px;
@@ -608,7 +624,7 @@ body .CTA-Section .left {
 @media (max-width: 768px) {
   body .CTA-Section .left {
     width: 40%;
-    margin: 0 1rem 0 0;
+    margin: 10% 1rem;
   }
 }
 body .CTA-Section .left img {
@@ -791,6 +807,7 @@ body .Lastest-Section .main {
 body .Lastest-Section .main .help-posts {
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
   body .Lastest-Section .main .help-posts {
