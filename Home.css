@@ -608,7 +608,7 @@ body .CTA-Section .left {
 @media (max-width: 768px) {
   body .CTA-Section .left {
     width: 40%;
-    margin: 10% 1rem;
+    margin: 0 1rem 0 0;
   }
 }
 body .CTA-Section .left img {
