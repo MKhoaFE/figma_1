@@ -119,7 +119,7 @@ body .Navbar .nav-item .special {
   }
 }
 body .Header {
-  background-image: url("../assets/BG_header.png");
+  background-image: url("/assets/BG_header.png");
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
@@ -296,7 +296,7 @@ body .Help-section .help-posts .item a {
   color: #ffa500;
 }
 body .Features-Section {
-  background-image: url("../assets/BG_header.png");
+  background-image: url("/assets/BG_header.png");
   height: 70%;
   width: 100%;
   display: flex;
@@ -442,7 +442,7 @@ body .Service-Section {
 }
 body .Service-Section .main {
   margin: 0 150px;
-  background-image: url("../assets/BG_header.png");
+  background-image: url("/assets/BG_header.png");
   z-index: 10;
   border-radius: 15px;
   display: flex;
@@ -766,7 +766,7 @@ body .Video-Section .right img {
   align-items: center;
 }
 body .Lastest-Section {
-  background-image: url("../assets/BG_header.png");
+  background-image: url("/assets/BG_header.png");
   width: 100%;
   height: 100%;
   display: flex;

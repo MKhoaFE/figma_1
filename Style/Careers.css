@@ -232,7 +232,7 @@ body .container .item4 {
   position: absolute;
   margin-top: 80%;
   left: 0;
-  background-image: url("../assets/BG_header.png");
+  background-image: url("/assets/BG_header.png");
   display: flex;
   justify-content: center;
   align-items: center;
