@@ -161,7 +161,7 @@ body .header .job p {
   font-style: 18px;
 }
 body .detail {
-  background-image: url("/assets/BG_header.png");
+  background-image: url("BG_header.png");
   height: 200%;
   width: 80%;
   margin: 10% 10%;

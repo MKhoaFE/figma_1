@@ -118,7 +118,7 @@ body .Navbar .nav-item .special {
   }
 }
 body .header {
-  background-image: url("/assets/BG_header.png");
+  background-image: url("BG_header.png");
   display: flex;
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
@@ -223,7 +223,7 @@ body .container .box {
 }
 body .container .box .card {
   width: 100%;
-  background-image: url("/assets/BG_header.png");
+  background-image: url("BG_header.png");
   border-radius: 20px;
 }
 body .container .box .card .box1 {
